@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/960cf21d08.js" crossorigin="anonymous"></script>
+    <!-- Ethnocentric -->
+    <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Quattrocentro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/registro_avances.css">
+    <title>Registrar Avances</title>
+</head>
+
+<body onload="cargar_tabla()">
+    <!-- Header -->
+    <div class="wrapper">
+        <div class="header-logo">
+            <img src="../Media/logo_apli.png">
+        </div>
+        <div class="header-perfil">
+            <a href="./perfil.html"><i class="fa-regular fa-user fa-2x"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar Menu -->
+    <div class="capa-navbar">
+        <div class="wrapper">
+            <a href="./registro_avances.html">
+                <h3>Registrar Avances</h3>
+            </a>
+            <a href="./ayuno.html">
+                <h3>Ayuno</h3>
+            </a>
+            <a href="./ejercicios.html">
+                <h3>Ejercicios</h3>
+            </a>
+            <a href="./recetas.html">
+                <h3>Recetas</h3>
+            </a>
+        </div>
+    </div>
+
+    <div class="Calendario">
+        <h1 class="titulo-calendario">Registro de Avances</h1>
+        <div class="w-tabla">
+            <table border="1" id="tabla-calendario" class="margen-tabla">
+                <tr class="titulo-partes">
+                    <td>Fecha</td>
+                    <td>Peso del día</td>
+                    <td>Hora de inicio de ayuno</td>
+                    <td>Hora de fin de ayuno</td>
+                    <td>Tipo de ayuno</td>
+                    <td>Ejercicio realizado</td>
+                    <td>Duración del ejercicio</td>
+                    <td>Editar</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="capa-form">
+        <strong><a href="#formulario-calendario" class="boton-registrar">Añadir Registro</a></strong> 
+        <div class="overlay" id="formulario-calendario">
+            <div class="wrapper-formulario">
+                <h3>Complete el formulario con su información personal:</h3>
+                <a href="#" class="boton-cerrar">&times;</a>
+                <div class="contenido-formulario">
+                    <div class="contenedor-estilo">
+                        <form>
+                            <label>Fecha</label>
+                            <input type="date" id="fecha" required>
+
+                            <label>Peso del día</label>
+                            <input type="number" id="peso" placeholder="Tu peso del día" required>
+
+                            <label>Hora de inicio del ayuno</label><br>
+                            <input type="time" id="ayuno-inicio" placeholder="Hora de comienzo del ayuno" required><br><br>
+
+                            <label>Hora de fin del ayuno</label><br>
+                            <input type="time" id="ayuno-fin" placeholder="Hora de fin del ayuno" required><br><br>
+
+                            <label>Horas de ayuno realizado</label><br>
+                            <select id="ayuno-total" required>
+                                <option hidden disabled selected>- Horas de ayuno -</option>
+                                <option>14 horas</option>
+                                <option>16 horas</option>
+                                <option>18 horas</option>
+                                <option>20 horas</option>
+                            </select>
+
+                            <label>Ejercicio realizado</label>
+                            <input type="text" id="ejercicio" placeholder="El ejercico realizado del dia" required>
+
+                            <label>Duración del ejercicio</label>
+                            <input type="text" id="duracion" placeholder="La duración del ejercicio realizado" required>
+
+
+                            <input type="button" value="Enviar" id="registrar" onclick="anadir_registro()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="formulario-actualizar">
+        <div class="wrapper-formulario">
+            <h3>Complete el formulario con su información personal:</h3>
+            <a href="#" class="boton-cerrar">&times;</a>
+            <div class="contenido-formulario">
+                <div class="contenedor-estilo">
+                    <form>
+                        <label>Fecha actualizar</label>
+                        <input type="date" id="fecha-actualizar" required>
+
+                        <label>Peso del día</label>
+                        <input type="number" id="peso-actualizar" placeholder="Tu peso del día" required>
+
+                        <label>Hora de inicio del ayuno</label><br>
+                        <input type="time" id="ayuno-inicio-actualizar" placeholder="Hora de comienzo del ayuno" required><br><br>
+
+                        <label>Hora de fin del ayuno</label><br>
+                        <input type="time" id="ayuno-fin-actualizar" placeholder="Hora de fin del ayuno" required><br><br>
+
+                        <label>Horas de ayuno realizado</label><br>
+                        <select id="ayuno-total-actualizar" required>
+                            <option hidden disabled selected>- Horas de ayuno -</option>
+                            <option>14 horas</option>
+                            <option>16 horas</option>
+                            <option>18 horas</option>
+                            <option>20 horas</option>
+                        </select>
+
+                        <label>Ejercicio realizado</label>
+                        <input type="text" id="ejercicio-actualizar" placeholder="El ejercico realizado del dia" required>
+
+                        <label>Duración del ejercicio</label>
+                        <input type="text" id="duracion-actualizar" placeholder="La duración del ejercicio realizado" required>
+
+
+                        <input type="button" value="Enviar" id="registrar" onclick="actualizar_registro()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer(info de empresa) -->
+    <div class="capa-footer1">
+        <div class="wrapper">
+            <div class="footer-info">
+                <h3>Información sobre la compañía</h3>
+                <p>Somos una empresa conformada de gente ágil y curiosa para el desarollo web. Nuestros miembros son
+                    capaces de armar aplicaciones web y de móvil lo cuál nos permite competir en el mercado actual.</p>
+            </div>
+            <div class="footer-redes">
+                <h3>Nuestras Redes</h3>
+                <div class="wrapper">
+                    <div class="nombre-red">
+                        <a href="https://twitter.com"> <i class="fa-brands fa-twitter fa-xl"></i></a>
+                    </div>
+
+                    <div class="nombre-red">
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    </div>
+
+                    <div class="nombre-red">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer(copyright) -->
+    <div class="capa-footer2">
+        <div class="wrapper">
+            <div class="copyright">
+                <div class="texto-copyright">
+
+                    <p><i class="fa-regular fa-copyright"></i> Copyright | Diseñado por Byters</p>
+                </div>
+            </div>
+            <div class="sobre-nosotros">
+                <a href="../index.html">Sobre Nosotros</a>
+            </div>
+        </div>
+    </div>
+    <script src="../Javascript/registro_avances.js"></script>
+</body>
+
+</html>

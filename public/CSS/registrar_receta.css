@@ -1,0 +1,267 @@
+div {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Header*/
+.header-logo,
+.header-perfil {
+    width: 50%;
+    background-color: #4E4B4C;
+}
+
+.header-logo img {
+    width: 17%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+
+.header-perfil {
+    padding-top: 14px;
+    padding-right: 5%;
+}
+
+.header-perfil i{
+    color: #FFC34E
+}
+
+.header-perfil {
+    text-align: end;
+}
+
+/*Navbar Menu*/
+.capa-navbar {
+    background-color: #FFC34E;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.capa-navbar a {
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*Registrar Receta*/
+.capa-registrar {
+    text-align: center;
+}
+
+.capa-registrar h1 {
+    font-family: 'Ethnocentric Rg', sans-serif;
+    color: #FF6C2B;
+}
+
+.boton-anadir {
+    padding-top: 18%;
+    padding-bottom: 3%;
+}
+
+.boton-anadir input {
+    background-color: #FF6C2B;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#mostrar-imagen{
+    margin-left: 28%;
+    width: 45%;
+    height: 120%;
+    border: 1px solid black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+input[type=file]{
+width: 100%;
+padding: 3px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: none;
+}
+
+
+.receta-formulario {
+    padding-top: 1%;
+}
+
+.imagen-receta, .informacion-receta {
+    width: 50%;
+}
+.receta-imagen img {
+    width: 30%;
+    padding-top: 15%;
+    padding-bottom: 3%;
+}
+
+.receta-formulario h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.receta-formulario textarea,
+.receta-formulario input {
+    background-color: #eeeeee;
+}
+
+.receta-formulario input[type=file], .receta-formulario input[type=text], .receta-formulario input[type=textarea] {
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.receta-formulario textarea {
+    width: 50%;
+    height: 40%;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Parte del Footer*/
+.capa-footer1 {
+    background-color: #5A5D5D;
+    padding-bottom: 20px;
+    
+}
+
+.capa-footer1 h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.footer-redes,
+.footer-info {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-info p {
+    /*Parrafo de informacion sobre la compañia*/
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-left: 24%;
+    padding-top: 2%;
+}
+
+
+
+.lado-imagenes {
+    text-align: end;
+}
+
+.redes-img {
+    width: 7%;
+    text-align: end;
+    padding-right: 6px;
+}
+
+.nombre-red {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+.nombre-red a {
+    text-decoration: none;
+    color: white;
+}
+
+/*CSS para la parte del copyright*/
+.capa-footer2 {
+    background-color: #4E4B4C;
+}
+
+.copyright,
+.sobre-nosotros {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.texto-copyright {
+    padding-left: 5%;
+    color: white;
+
+}
+
+.sobre-nosotros {
+    padding-top: 13px;
+    text-align: center;
+}
+
+.sobre-nosotros a {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media(max-width: 767px) {
+
+    .header-logo img {
+        width: 70%;
+    }
+
+    .header-perfil img {
+        width: 25%;
+        padding-bottom: 3%;
+    }
+
+    .imagen-receta,
+    .informacion-receta {
+        width: 100%;
+    }
+    .informacion-receta {
+        padding-top: 80%;
+    }
+
+    .receta-imagen {
+        padding-bottom: 20%;
+    }
+
+    .receta-formulario {
+        padding-bottom: 60%;
+    }
+
+    /*Foooter*/
+    .footer-info,
+    .footer-redes,
+    .footer-info p {
+        width: 100%;
+    }
+
+    .footer-info p {
+        padding-left: 0%;
+    }
+    .nombre-red {
+        width: 33.3%;
+    }
+    .img-copyright img {
+        width: 35%;
+        padding-top: 34%;
+    }
+    .sobre-nosotros {
+        padding-top: 6%;
+    }
+}

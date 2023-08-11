@@ -1,0 +1,242 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/perfil.css" type="text/css">
+    <script src="https://kit.fontawesome.com/960cf21d08.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- Ethnocentric -->
+    <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+     <!-- Monserrat Bold -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Quattrocento&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Perfil</title>
+</head>
+
+<body onload="cargar_info()">
+    <!-- Header -->
+    <div class="wrapper">
+        <div class="header-logo">
+            <img src="../Media/logo_apli.png">
+        </div>
+        <div class="header-perfil">
+            <a href="./perfil.html"><i class="fa-regular fa-user fa-2x"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar Menu -->
+    <div class="capa-navbar">
+        <div class="wrapper">
+            <a href="./registro_avances.html">
+                <h3>Registrar Avances</h3>
+            </a>
+            <a href="./ayuno.html">
+                <h3>Ayuno</h3>
+            </a>
+            <a href="./ejercicios.html">
+                <h3>Ejercicios</h3>
+            </a>
+            <a href="./recetas.html">
+                <h3>Recetas</h3>
+            </a>
+        </div>
+    </div>
+
+    <!-- Perfil -->
+    <div class="capa-perfil">
+        <div class="wrapper">
+            <div class="foto-perfil" id="foto-perfil">
+            </div>
+
+            <div class="info-perfil" id="info-perfil">
+                <div class="overlay" id="formulario-personal">
+                    <div class="wrapper-formulario">
+                        <h3>Complete el formulario con su información personal:</h3>
+                        <a href="#" class="boton-cerrar">&times;</a>
+                        <div class="contenido-formulario">
+                            <div class="contenedor-estilo">
+                                <form>
+                                    <label>Nombre Completo</label>
+                                    <input type="text" id="nombre" placeholder="Tu nombre y apellido" required>
+
+                                    <label>Género</label><br>
+                                    <select id="genero">
+                                        <option hidden disabled selected>Tu género</option>
+                                        <option>Masculino</option>
+                                        <option>Femenino</option>
+                                    </select>
+
+                                    <label>Fecha de Nacimiento</label>
+                                    <input type="date" id="fecha" placeholder="Tu fecha de nacimiento" required>
+
+                                    <label>Peso Actual</label>
+                                    <input type="number" id="peso" placeholder="Tu peso actual" required>
+
+                                    <label>Altura Actual</label>
+                                    <input type="number" id="altura" placeholder="Tu altura actual" required>
+
+                                    <label>Foto de Perfil</label>
+                                    <input type="file" required id="imagen_input" accept="image/png, image/jpg">
+                                    <div id="mostrar-imagen"></div>
+                                    <input type="button" value="Actualizar" id="registrar" onclick="actualizar()" >
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+ 
+
+    </div>
+
+    <!-- Grafico -->
+    <div class="capa-grafico" >
+        <h1>Gráfico</h1>
+        <canvas id="myChart" class="canva_style" ></canvas>
+    </div>
+
+    <!-- Agua -->
+    <div class="capa-agua">
+        <div class="wrapper">
+            <div class="h1-agua" id="agua_cant">
+                <h1 class="titulo-agua">Cantidad de agua recomendada=</h1>
+
+            </div>
+            <div class="img-agua">
+                <div class="wrapper">
+                    <div class="w-agua">
+                        <img src="../Media/vaso-agua.png" alt="">
+                    </div>
+                    <div class="w-agua">
+                        <img src="../Media/vaso-agua.png" alt="">
+                    </div>
+                    <div class="w-agua">
+                        <img src="../Media/vaso-agua.png" alt="">
+                    </div>
+                    <div class="w-agua">
+                        <img src="../Media/vaso-agua.png" alt="">
+                    </div>
+                    <div class="w-agua">
+                        <img src="../Media/vaso-agua.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="capa-logros">
+        <div class="capa-lobtenidos">
+            <h1>Logros Completados</h1>
+            <div class="wrapper" id="logros-obtenidos">
+                
+            </div>
+        </div>
+        <div class="capa-lpendientes" >
+            <h1>Logros Pendientes</h1>
+            <div class="wrapper" id="logros-pendientes">
+
+               
+            </div>
+        </div>
+        <a href="#formulario-logro" class="boton-logro">Añadir Nuevo Logro</a>
+        <div class="overlay" id="formulario-logro">
+            <div class="wrapper-formulario">
+                <h3>Ingresa tu nuevo logro</h3>
+                <a href="#" class="boton-cerrar">&times;</a>
+                <div class="contenido-formulario">
+                    <div class="contenedor-estilo">
+                        <form>
+                            <label>Título del logro</label>
+                            <input type="text" id="titulo" placeholder="Ej: Llegar a 63Kg" required>
+
+                            <label>Tipo de logro</label>
+                            <select id="tipo-logro">
+                                <option hidden selected disabled>- Selecciona un tipo de logro -</option>
+                                <option>Reducción o Subida de Peso</option>
+                                <option>Reducción o Aumento del IMC</option>
+                                <option>Cantidad de Horas de Ayuno</option>
+                                <option>Cantidad de Días de Ayuno</option>
+                            </select>
+                            <input type="button" value="Añadir Logro" id="reg_logro" onclick="anadir_logro()" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="formulario-estado">
+        <div class="wrapper-formulario">
+            <h3>Actualice el Estado del Logro</h3>
+            <a href="#" class="boton-cerrar">&times;</a>
+            <div class="contenido-formulario">
+                <div class="contenedor-estilo">
+                    <form>
+                        <label>Estado del Logro</label>
+                        <select id="estado-logro" required>
+                            <option hidden selected disabled>- Seleccione el estado del logro -</option>
+                            <option>Pendiente</option>
+                            <option>Completado</option>
+                        </select>
+                        <input type="button" value="Actualizar Logro" id="estado_logro" onclick="actualizar_logro()" >
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer(info de empresa) -->
+    <div class="capa-footer1">
+        <div class="wrapper">
+            <div class="footer-info">
+                <h3>Información sobre la compañía</h3>
+                <p>Somos una empresa conformada de gente ágil y curiosa para el desarollo web. Nuestros miembros son
+                    capaces de armar aplicaciones web y de móvil lo cual nos permite competir en el mercado actual.</p>
+            </div>
+            <div class="footer-redes">
+                <h3>Nuestras Redes</h3>
+                <div class="wrapper">
+                    <div class="nombre-red">
+                        <a href="https://twitter.com"> <i class="fa-brands fa-twitter fa-xl"></i></a>
+                    </div>
+    
+                    <div class="nombre-red">
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    </div>
+    
+                    <div class="nombre-red">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                    </div>
+    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer(copyright) -->
+    <div class="capa-footer2">
+        <div class="wrapper">
+            <div class="copyright">
+                    <div class="texto-copyright">
+
+                        <p><i class="fa-regular fa-copyright"></i> Copyright | Diseñado por Byters</p>
+                    </div>
+            </div>
+            <div class="sobre-nosotros">
+                <a href="../index.html">Sobre Nosotros</a>
+            </div>
+        </div>
+    </div>
+    <script src="../Javascript/perfil.js"></script>
+</body>
+
+</html>

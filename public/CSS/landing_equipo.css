@@ -1,0 +1,379 @@
+div {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Banner*/
+.capa-banner {
+    background-color: #041E50;
+    text-align: center;
+}
+
+.logo-equipo {
+    padding-bottom: 3%;
+}
+
+.conocenos {
+    padding-left: 44%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.fondo-blanco {
+    text-align: center;
+    height: 6%;
+    width: 22%;
+    padding-top: 1%;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border-top: 100px;
+    color: #041E50;
+}
+
+.fondo-blanco h2 {
+    margin-top: 0%;
+}
+
+
+/*info-equipo*/
+.capa-somos {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-color: #041E50;
+    color: #ffffff;
+    text-align: center;
+}
+
+.capa-somos h3 {
+    padding-left: 11%;
+    padding-right: 11%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.somos-descripcion,
+.somos-img {
+    width: 50%;
+}
+
+.somos-descripcion {
+    padding-top: 5%;
+}
+
+.somos-descripcion h1 {
+    font-family: 'Ethnocentric Rg', sans-serif;
+}
+
+/*Productos*/
+.capa-proyectos {
+    background-color: #041E50;
+    text-align: center;
+    color: white;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.capa-proyectos h1 {
+    font-family: 'Ethnocentric Rg', sans-serif;
+    margin-top: 0%;
+    padding-bottom: 3%;
+}
+
+.proyectos-imagen,
+.proyectos-apli {
+    width: 50%;
+}
+
+.proyectos-apli img {
+    width: 60%;
+}
+
+.proyectos-apli h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.proyectos-apli a {
+    text-decoration: none;
+    color: white;
+}
+
+.proyectos-apli button {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #EC8211;
+    border-radius: 10px;
+
+}
+
+.proyectos-apli h2 {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.proyectos-imagen {
+    padding-left: 5%;
+}
+
+.celeste-producto {
+    height: 100%;
+    width: 80%;
+    background-color: #3BBAB2;
+    border-radius: 5%;
+}
+
+/*Nuestra Empresa*/
+.capa-empresa {
+    background-color: #041E50;
+    text-align: center;
+    color: white;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.w-empresa {
+    width: 33.3%;
+    padding-left: 6%;
+}
+
+.capa-empresa h1 {
+    font-family: 'Ethnocentric Rg', sans-serif;
+    margin-top: 0%;
+    padding-bottom: 3%;
+}
+
+.fondo-celeste {
+    height: 100%;
+    width: 80%;
+    background-color: #3BBAB2;
+    border-radius: 5%;
+}
+
+.fondo-celeste h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fondo-celeste p {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/*Nuestro Equipo*/
+.capa-equipo {
+    padding-top: 6%;
+    background-color: #041E50;
+    text-align: center;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.capa-equipo h1 {
+    font-family: 'Ethnocentric Rg', sans-serif;
+    margin-top: 0%;
+    padding-bottom :3%;
+}
+
+.equipo-sofia,
+.equipo-michael,
+.equipo-diego,
+.equipo-rodrigo {
+    padding-top: 2%;
+    text-align: center;
+    width: 25%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.equipo-sofia p,
+.equipo-michael p,
+.equipo-diego p,
+.equipo-rodrigo p {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.equipo-sofia img,
+.equipo-michael img,
+.equipo-diego img,
+.equipo-rodrigo img{
+    width: 50%;
+}
+
+.divisor {
+    height: 1%;
+    width: 100%;
+    background-color: #3BBAB2;
+}
+
+/*Parte del Footer*/
+.capa-footer1 {
+    background-color: #5A5D5D;
+    padding-bottom: 20px;
+
+}
+
+.capa-footer1 h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.footer-redes,
+.footer-info {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-info p {
+    /*Parrafo de informacion sobre la compañia*/
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-left: 24%;
+    padding-top: 2%;
+}
+
+
+
+.lado-imagenes {
+    text-align: end;
+}
+
+.redes-img {
+    width: 7%;
+    text-align: end;
+    padding-right: 6px;
+}
+
+.nombre-red {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.nombre-red a {
+    text-decoration: none;
+    color: white;
+}
+
+/*CSS para la parte del copyright*/
+.capa-footer2 {
+    background-color: #4E4B4C;
+}
+
+.copyright,
+.sobre-nosotros {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.texto-copyright {
+    padding-left: 5%;
+    color: white;
+
+}
+
+.sobre-nosotros {
+    padding-top: 13px;
+    text-align: center;
+}
+
+.sobre-nosotros a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*Media Query*/
+@media(max-width: 767px) {
+    .logo-equipo img {
+        width: 100%;
+    }
+
+    .conocenos {
+        padding-left: 11%;
+    }
+
+    .fondo-blanco {
+        width: 90%;
+    }
+
+    .somos-descripcion,
+    .somos-img {
+        width: 100%;
+    }
+
+    .somos-img img {
+        width: 100%;
+    }
+
+    .proyectos-imagen,
+    .proyectos-apli {
+        width: 95%;
+    }
+
+    .proyectos-apli {
+        padding-left: 4%;
+    }
+
+    .proyectos-apli img {
+        width: 80%;
+    }
+
+    .proyectos-apli h2 {
+        padding-left: 17%;
+        padding-right: 17%;
+    }
+
+    .celeste-producto,
+    .celeste-producto img {
+        width: 99%;
+    }
+
+    .w-empresa {
+        width: 100%;
+        padding-bottom: 2%;
+    }
+
+    .fondo-celeste {
+        width: 95%;
+    }
+
+    .equipo-diego,
+    .equipo-sofia,
+    .equipo-michael,
+    .equipo-rodrigo {
+        width: 100%;
+    }
+
+    /*Foooter*/
+    .footer-info,
+    .footer-redes,
+    .footer-info p {
+        width: 100%;
+    }
+
+    .footer-info p {
+        padding-left: 0%;
+    }
+
+    .nombre-red {
+        width: 33.3%;
+    }
+
+    .img-copyright img {
+        width: 35%;
+        padding-top: 34%;
+    }
+
+    .sobre-nosotros {
+        padding-top: 6%;
+    }
+}

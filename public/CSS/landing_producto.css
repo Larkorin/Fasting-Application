@@ -1,0 +1,464 @@
+body {
+    margin: 0%;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Header*/
+.capa-logo,
+.capa-botones {
+    width: 50%;
+}
+
+.capa-logo img {
+    padding-top: 10px;
+    width: 17%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+
+.inicio img {
+    width: 21%;
+
+}
+
+.registrar img {
+    padding-top: 20px;
+    padding-left: 3%;
+}
+
+.inicio {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: right;
+    width: 70%;
+}
+
+.capa-botones {
+    padding-top: 0%;
+}
+
+.registrar {
+    width: 30%;
+}
+
+.header {
+    background-color: #4E4B4C;
+}
+
+/*Banner*/
+.imagen {
+    height: 80%;
+    background-image: url(../Media/Fondo_page.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.imagen p {
+    font-family:'Montserrat', sans-serif
+    
+    ;
+    color: #fff;
+    text-shadow: 0px 0px 7px #000000;
+    font-size: 30px;
+}
+
+.imagen h1 {
+    font-family: 'Ethnocentric Rg', sans-serif;
+    padding-top: 12%;
+    margin-top: 0%;
+    color: #F69D24;
+    font-size: 60px;
+    text-shadow: 0px 2px 7px black;
+}
+
+/*Contenido de la aplicacion*/
+.contenido-apli {
+    padding-top: 4%;
+}
+
+.ejer h2,
+.receta h2,
+.calendario h2,
+.historial h2,
+.logros h2 {
+    font-family:'Montserrat', sans-serif;
+}
+
+.ejer p,
+.receta p,
+.calendario p,
+.historial p,
+.logros p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ejer,
+.receta,
+.calendario {
+    width: 33.3%;
+    text-align: center;
+}
+
+.ejer img {
+    width: 60%;
+}
+
+.receta img {
+    width: 60%;
+}
+
+.historial {
+    text-align: center;
+    padding-left: 15%;
+}
+
+.logros p {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.logros {
+    text-align: center;
+    padding-right: 17%;
+}
+
+.historial,
+.logros {
+    width: 50%;
+}
+
+.historial img {
+    width: 60%;
+}
+
+.logros img {
+    width: 65%;
+}
+
+.historial p,
+.receta p,
+.calendario p {
+    padding-left: 10%;
+    padding-right: 12%;
+}
+
+.ejer p {
+    padding-left: 5%;
+    padding-right: 7%;
+}
+
+.calendario img {
+    width: 60%;
+}
+
+/*Y Mucho Mas*/
+.botones-abajo h2,
+.botones-abajo h4 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif
+}
+.botones-abajo h4 {
+    padding-bottom: 2%;
+}
+.logros h3 {
+    color: black;
+}
+
+.ini,
+.regis {
+    width: 50%;
+}
+.ini  {
+    text-align: end;
+    padding-right: 2%
+}
+
+.regis {
+    padding-left: 2%;
+
+}
+.botones-abajo {
+    padding-bottom: 6%;
+    padding-top: 3%;
+}
+
+/*Parte del Footer*/
+.capa-footer1 {
+    background-color: #5A5D5D;
+    padding-bottom: 20px;
+    
+}
+
+.capa-footer1 h3 {
+    font-family:'Montserrat', sans-serif;
+    color: white;
+}
+
+.footer-redes,
+.footer-info {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-info p {
+    /*Parrafo de informacion sobre la compañia*/
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-left: 24%;
+    padding-top: 2%;
+}
+
+
+
+.lado-imagenes {
+    text-align: end;
+}
+
+.redes-img {
+    width: 7%;
+    text-align: end;
+    padding-right: 6px;
+}
+.nombre-red {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.nombre-red a {
+    text-decoration: none;
+    color: white;
+}
+
+/*CSS para el pop up*/
+.boton-registrar, .boton-iniciar{
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    background: #FF6C2B;
+    border-radius: 50px;
+    border: solid black;
+    font-family: 'Montserrat', sans-serif;
+}
+.boton-registrar {
+    padding: 15px 48px;
+}
+.boton-iniciar {
+    padding: 15px 35px;
+}
+
+
+.overlay{ 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    Left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper-formulario{ 
+    margin: 70px auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0s ease-in-out;
+    text-align: start;
+}
+
+.wrapper-formulario h3{
+    margin-top: 0;
+    color: #333;
+}
+
+.wrapper-formulario .boton-cerrar{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.wrapper-formulario .contenido-formulario{
+    max-height: 70%;
+    overflow: auto;
+}
+
+.contenedor-estilo{
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    padding: 0px 0;
+}
+
+.form label{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=date], input[type=file], select{
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="button"]{
+    background-color: #413b3b;
+    color: #fff;
+    padding: 15px 50px;
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#mostrar-imagen{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/*CSS para la parte del copyright*/
+.capa-footer2 {
+    background-color: #4E4B4C;
+}
+
+.copyright,
+.sobre-nosotros {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.texto-copyright {
+    padding-left: 5%;
+    color: white;
+
+}
+
+.sobre-nosotros {
+    padding-top: 13px;
+    text-align: center;
+}
+
+.sobre-nosotros a {
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 767px) {
+    .capa-logo img {
+        width: 80%;
+    }
+    .inicio img {
+        width: 100%;
+    }
+    .registrar img {
+        padding-top: 1%;
+        width: 89%;
+    }
+    .inicio, .registrar {
+        width: 50%;
+    }
+    .imagen {
+        background-position: center;
+        height: 50%;
+        width: 100%;
+    }
+    .imagen h1 {
+        font-size: 35px;
+    }
+    .ejer, .receta, .calendario {
+        width: 100%;
+    }
+    .historial, .logros {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .ini img, .regis img {
+
+        padding-left: 0%;
+    }
+    .ini img {
+        width: 76%;
+    }
+    .regis img {
+        width: 70%;
+    }
+    .ini {
+        text-align: end;
+    }
+    
+     /*Foooter*/
+     .footer-info,
+     .footer-redes,
+     .footer-info p {
+         width: 100%;
+     }
+ 
+     .footer-info p {
+         padding-left: 0%;
+     }
+     .nombre-red {
+         width: 33.3%;
+     }
+     .img-copyright img {
+         width: 35%;
+         padding-top: 34%;
+     }
+     .sobre-nosotros {
+         padding-top: 6%;
+     }
+
+     .wrapper-formulario {
+        margin: 10px auto;
+        width: 70%;
+        ;
+    }
+        
+    .wrapper-formulario .boton-cerrar {
+        top: -5px;
+        right: 5px;
+    }    
+}

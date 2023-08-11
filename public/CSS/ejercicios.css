@@ -1,0 +1,289 @@
+body {
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+div {
+    box-sizing: border-box;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Header*/
+.header-logo,
+.header-perfil {
+    width: 50%;
+    background-color: #4E4B4C;
+}
+
+.header-logo img {
+    width: 17%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+
+.header-perfil {
+    padding-top: 14px;
+    padding-right: 5%;
+}
+
+.header-perfil i{
+    color: #FFC34E
+}
+
+.header-perfil {
+    text-align: end;
+}
+
+/*Navbar Menu*/
+.capa-navbar {
+    background-color: #FFC34E;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.capa-navbar a {
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+/*Contenido*/
+.titulo1 h1 {
+    text-align: center;
+    font-family: 'Ethnocentric Rg', sans-serif;
+    color: #FF6C2B;
+}
+
+.titulo1 h2 {
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+
+}
+
+
+.productos {
+    width: 33%;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 50px;
+    font-family:'Montserrat', sans-serif;
+    padding-left: 15PX;
+
+}
+
+.btn h2 {
+    text-decoration: none;
+    color: black;
+    height: 30px;
+    font-family:'Montserrat', sans-serif;
+    font-size:x-large
+}
+.btn a {
+    text-decoration: none;
+}
+
+.titulocategoria,
+.titulocategoria1,
+.titulocategoria2,
+.titulocategoria3,
+.titulocategoria4,
+.titulocategoria5 {
+    text-align: center;
+    background-color: #FF6C2B;
+    color: white;
+    font-family:'Montserrat', sans-serif;
+}
+
+.videoestiramiento {
+    display: flex;
+    width: 25%;
+    padding-right: 20px;
+    height: min-content;
+    padding: 20px;
+}
+
+.videocardio {
+    display: flex;
+    width: 25%;
+    padding-right: 20px;
+    height: min-content;
+    padding: 20px;
+
+}
+
+.videozumba,
+.videofuncional,
+.videopilates,
+.videofuerza {
+    display: flex;
+    width: 25%;
+    padding-right: 20px;
+    height: min-content;
+    padding: 20px;
+
+}
+
+.bannerinicial {
+
+    background-image: url("../Media/GIMNASIO.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    text-align: start;
+    height: 100%;
+    text-shadow: 0px 0px 7px black;
+}
+
+.bannerinicial h1 {
+    padding-top: 4%;
+    padding-left: 4%;
+}
+
+/*Parte del Footer*/
+.capa-footer1 {
+    background-color: #5A5D5D;
+    padding-bottom: 20px;
+    
+}
+
+.capa-footer1 h3 {
+    font-family:'Montserrat', sans-serif;
+    color: white;
+}
+
+.footer-redes,
+.footer-info {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-info p {
+    /*Parrafo de informacion sobre la compañia*/
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-left: 24%;
+    padding-top: 2%;
+}
+
+
+
+.lado-imagenes {
+    text-align: end;
+}
+
+.redes-img {
+    width: 7%;
+    text-align: end;
+    padding-right: 6px;
+}
+
+.nombre-red {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+.nombre-red a {
+    text-decoration: none;
+    color: white;
+}
+
+/*CSS para la parte del copyright*/
+.capa-footer2 {
+    background-color: #4E4B4C;
+}
+
+.copyright,
+.sobre-nosotros {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.texto-copyright {
+    padding-left: 5%;
+    color: white;
+
+}
+
+.sobre-nosotros {
+    padding-top: 13px;
+    text-align: center;
+}
+
+.sobre-nosotros a {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media(max-width: 767px) {
+    .header-logo img {
+        width: 70%;
+    }
+
+    .header-perfil img {
+        width: 25%;
+        padding-bottom: 3%;
+    }
+
+    .productos {
+        width: 50%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .productos img {
+        width: 100%;
+    }
+
+    .videoestiramiento,
+    .videocardio,
+    .videozumba,
+    .videofuncional,
+    .videofuerza, 
+    .videopilates {
+        width: 100%;
+    }
+
+    .bannerinicial {
+        background-position: right;
+        text-align: center;
+    }
+    .bannerinicial h1 {
+        padding-top: 100%;
+    }
+
+     /*Foooter*/
+     .footer-info,
+     .footer-redes,
+     .footer-info p {
+         width: 100%;
+     }
+ 
+     .footer-info p {
+         padding-left: 0%;
+     }
+     .nombre-red {
+         width: 33.3%;
+     }
+     .img-copyright img {
+         width: 35%;
+         padding-top: 34%;
+     }
+     .sobre-nosotros {
+         padding-top: 6%;
+     }
+}
